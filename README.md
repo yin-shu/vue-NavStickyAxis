@@ -3,6 +3,9 @@
 ## 概述
 > 一个基于vue2的可浮于顶部的导航轴
 
+## 效果
+![](./demo/img/Jietu20190112-225047-HD.gif)
+
 ## 安装
 
 ### 安装vue-nav-sticky-axis
