@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-nav-sticky-axis</title>
+    <script src='https://unpkg.com/vue@2.2.6'></script>
+    <script src="../dist/vue-nav-sticky-axis.min.js"></script>
+    <style>
+      .content {
+        height: 200px;
+        background: #98e8cd;
+      }
+      .blank{
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>demo</h1>
+      <nav-sticky-axis :top="50">
+        <nav-sticky-axis-slot
+          v-for="(item, index) in list"
+          :key="index"
+          :nav-img="item.img"
+          :nav-text="item.navText"
+          :index="index"
+        >
+          <section class="content">
+            {{item.info}}
+          </section>
+        </nav-sticky-axis-slot>
+      </nav-sticky-axis>
+      <div class="blank">占位</div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data() {
+          return {
+            list: [
+              {
+                id: 0,
+                navText: '北京',
+                info: '内容一',
+                img: './img/zh.png'
+              },
+              {
+                id: 1,
+                navText: '新加坡',
+                info: '内容二',
+                img: './img/xjp.png'
+              },
+              {
+                id: 2,
+                navText: '纽约',
+                info: '内容三',
+                img: './img/mg.png'
+              },
+              {
+                id: 3,
+                navText: '杭州',
+                info: '内容四',
+                img: './img/zh.png'
+              },
+            ]
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
