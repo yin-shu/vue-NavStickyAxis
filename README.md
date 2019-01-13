@@ -17,7 +17,7 @@ npm install vue-nav-sticky-axis
 ```
 import {NavStickyAxis, NavStickyAxisSlot} from 'vue-nav-sticky-axis'
 ```
-也可以在 html 文件中使用 script 标签引入脚本，访问全局变量 Vue2Waterfall
+也可以在 html 文件中使用 script 标签引入脚本，访问全局变量 NavStickyAxis和NavStickyAxisSlot
 ```
 <script src="dist/vue-nav-sticky-axis.min.js"></script>
 ```
